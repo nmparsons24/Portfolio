@@ -1,0 +1,124 @@
+body{
+  background-color: rgb(240, 232, 205);
+}
+/* - - - - - INTRO - - - - - */
+
+/* NAV BAR */
+nav ul{ /* affecting the whole bar - list*/
+  position:fixed;
+  top: 0;
+  flex-wrap: wrap;
+  display:flex;
+  flex-direction:column;
+  list-style-type: none;
+  padding: 25px;
+  margin: 20px;
+  border: 5px solid rgba(217, 196, 236, 0.686);
+  border-end-end-radius: 20%;
+  background-color: rgb(87, 56, 116);
+}
+  nav ul li a{
+    flex-wrap: wrap;
+    display: flex;
+    padding: 5px;
+    margin-bottom: 5px;
+    color:rgb(249, 246, 236); 
+    text-decoration: none;
+    font-family:monospace;
+    font-size: large;
+    background-color: rgb(87, 56, 116);
+  }
+  /* Nav Hover */
+   nav ul li a:hover {
+      color: rgb(240, 232, 205) ;
+      font-weight: bolder;
+   } 
+
+/* - - - SOCIALS - PICTURE - INTRO - - - */
+
+ /* SOCIAL MEDIA ICONS */
+ .social-icons {
+    position:fixed;
+    display:flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    margin:auto;
+    border: 5px solid rgba(217, 196, 236, 0.686);
+    border-end-start-radius: 20%;
+    background-color: rgba(217, 196, 236, 0.686);
+ }
+ 
+     .social-icons ul li{
+      display:flex;
+      flex-flow: wrap column;
+      padding: 25px;
+      margin: 20px;
+     } 
+
+   /* LinkedIn */
+   .fa-linkedin{
+     text-decoration: none;
+     color: white;
+   }
+
+   /* Instagram */
+   .fa-instagram{
+     text-decoration: none;
+     color: white;
+   }
+   /* Hover Effect for Icons */
+     .social-icons ul li a:hover {
+        color: rgb(240, 232, 205) ;
+        font-weight: bolder;
+     /* - - - add style - - - */
+   }
+
+  /* PORTRAIT PICTURE */
+  .portrait {
+    flex-wrap: wrap;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    border: solid 10px rgb(87, 56, 116);
+    border-radius:50%;  
+  }
+ /* TOP Intro ALL */ 
+  .intro {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin: 20px;
+    background-color: rgb(249, 246, 236);
+}
+ /* TOP Intro Heading */
+  .intro h1{ 
+    font-family: monospace;
+    font-size: xx-large;
+}
+ /* Top Intro sentence */
+  .intro h3{
+    font-family: monospace;
+}
+
+/* - - - - - HOME SECTION - - - - - */
+
+#home h2 {
+  flex-wrap: wrap;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction:column;
+  font-family: monospace;
+}
+#home p {
+  flex-wrap: wrap;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction:column;
+  font-family: monospace;
+}
