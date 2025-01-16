@@ -20,7 +20,7 @@ nav ul{ /* affecting the whole bar - list*/
   nav ul li a{
     flex-wrap: wrap;
     display: flex;
-    padding: 5px;
+    /* padding: 5px; */
     margin-bottom: 5px;
     color:rgb(249, 246, 236); 
     text-decoration: none;
@@ -38,34 +38,39 @@ nav ul{ /* affecting the whole bar - list*/
 
  /* SOCIAL MEDIA ICONS */
  .social-icons {
-    position:fixed;
-    display:flex;
-    flex-flow: wrap row;
-    justify-content: center;
-    margin:auto;
+    position:absolute;
+    right: 0;
+    margin-right: 25px;
     border: 5px solid rgba(217, 196, 236, 0.686);
     border-end-start-radius: 20%;
     background-color: rgba(217, 196, 236, 0.686);
- }
+   }
  
-     .social-icons ul li{
+     .social-icons ul{
       display:flex;
       flex-flow: wrap column;
-      padding: 25px;
-      margin: 20px;
+      list-style:none;
+      padding: 15px;
+      margin:auto;
+      font-size: 50px;
      } 
 
+
    /* LinkedIn */
-   .fa-linkedin{
+     .fa-linkedin{
+     padding:10px;
      text-decoration: none;
      color: white;
-   }
+     margin:5px;
+     }
 
    /* Instagram */
-   .fa-instagram{
+     .fa-instagram{
+     padding:10px;
      text-decoration: none;
      color: white;
-   }
+     }
+
    /* Hover Effect for Icons */
      .social-icons ul li a:hover {
         color: rgb(240, 232, 205) ;
@@ -74,15 +79,43 @@ nav ul{ /* affecting the whole bar - list*/
    }
 
   /* PORTRAIT PICTURE */
-  .portrait {
-    flex-wrap: wrap;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin:auto;
+  .portraitDefault {
+    /* flex-wrap: wrap; */
+    /* display:flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* margin:auto; */
+    opacity: 1;
     border: solid 10px rgb(87, 56, 116);
     border-radius:50%;  
   }
+
+  .portraitMouseover{
+    border: solid 10px rgb(87, 56, 116);
+    border-radius:50%; 
+  }
+
+
+  .drawings {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items: center;
+  }
+  .catDrawing {
+    border: 5px solid rgba(186, 149, 221, 0.686);;
+    border-radius:50%;  
+    margin: 5px;
+  }
+
+  .dogDrawing {
+    border: 5px solid rgba(186, 149, 221, 0.686);
+    border-radius:50%;
+    margin: 5px;  
+  }
+
+
  /* TOP Intro ALL */ 
   .intro {
     flex-wrap: wrap;
@@ -93,11 +126,13 @@ nav ul{ /* affecting the whole bar - list*/
     padding: 40px;
     margin: 20px;
     background-color: rgb(249, 246, 236);
+    
 }
  /* TOP Intro Heading */
   .intro h1{ 
     font-family: monospace;
     font-size: xx-large;
+    
 }
  /* Top Intro sentence */
   .intro h3{
