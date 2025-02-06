@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doodle Away</title>
+    <link rel="icon" href="https://fav.farm/🎨" />
+</head>
+<body>
+    <h1> Click, drag, draw, enjoy</h1>
+    
+
+ <canvas id="draw" width=auto height=auto></canvas>
+    
+    <script>
+      const canvas = document.querySelector('#draw');
+      const ctx = canvas.getContext('2d');
+        
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerWidth;
+        
+          ctx.strokeStyle = '#BADA55';
+          ctx.lineJoin = 'round';
+          ctx.lineCap = 'round';
+          ctx.lineWidth = 50;
+    // go on MDN for different lineJoin and lineCap options
+        
+        let isDrawing = false;
+    // dummy variable so that it can flag on and off drawing based on whether click is held down
+        let lastX = 0;
+        let lastY = 0; 
+        let hue = 0;
+        let direction = true;
+        
+    // you need starting and ending x and y 
+        
+        function draw(e) {
+          if (!isDrawing) return;
+    // This will stop the function running when they are not mouse down
+          console.log(e);
+          ctx.strokeStyle = `hsl(${hue}, 95%, 70%)`;
+          ctx.beginPath();
+    // start from 0 and go to where mouse is going
+          ctx.moveTo(lastX, lastY);
+          ctx.lineTo(e.offsetX, e.offsetY);
+          ctx.stroke();
+    // acn assign 2 variables as below, called destructuring an array
+          [lastX, lastY] = [e.offsetX, e.offsetY];
+          hue++;
+          if (hue >= 360) {
+            hue = 0;
+          }
+          if (ctx.lineWidth >= 100 || ctx.lineWidth <= 5) {
+            direction = !direction;
+          }
+          if(direction) {
+          ctx.lineWidth++;
+          } else {
+            ctx.lineWidth--;
+          }
+        }
+        
+    canvas.addEventListener('mousedown', (e) => {
+          isDrawing = true;
+          [lastX, lastY] = [e.offsetX, e.offsetY];
+        });
+        
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', (e) => isDrawing = false);
+        canvas.addEventListener('mouseout', (e) => isDrawing = false);
+        canvas.addEventListener('dblclick', (e) => ctx.clearRect(0, 0, canvas.width, canvas.height));
+        
+        </script>
+        
+        <style>
+          html, body {
+            margin: 0;
+          }
+        </style>
+        
+
+          
+</body>
+</html>

@@ -1,6 +1,18 @@
 body{
   background-color: rgb(240, 232, 205);
   margin: 0;
+  color: rgb(64, 56, 29);
+}
+/* - - - - - PARTICLES - - - - - */
+#particles-js {
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  z-index:-1;
+  background:rgb(240, 232, 205);  
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: 50% 50%; */
 }
 /* - - - - - INTRO - - - - - */
 
@@ -16,7 +28,7 @@ nav ul{ /* affecting the whole bar - list*/
   margin: 20px;
   border: 5px solid rgba(217, 196, 236, 0.686);
   border-end-end-radius: 20%;
-  background-color: rgb(87, 56, 116);
+  background-color: rgb(87, 56, 116, 0.8);
 }
   nav ul li a{
     flex-wrap: wrap;
@@ -27,7 +39,7 @@ nav ul{ /* affecting the whole bar - list*/
     text-decoration: none;
     font-family:monospace;
     font-size: large;
-    background-color: rgb(87, 56, 116);
+    background-color: rgb(87, 56, 116,);
   }
   /* Nav Hover */
    nav ul li a:hover {
@@ -41,8 +53,8 @@ nav ul{ /* affecting the whole bar - list*/
  .social-icons {
     position:absolute;
     right: 0;
-    margin-right: 25px;
-    border: 5px solid rgba(217, 196, 236, 0.686);
+    margin-right: 20px;
+    border: px solid rgba(217, 196, 236, 0.686);
     border-end-start-radius: 20%;
     background-color: rgba(217, 196, 236, 0.686);
    }
@@ -55,7 +67,6 @@ nav ul{ /* affecting the whole bar - list*/
       margin:auto;
       font-size: 50px;
      } 
-
 
    /* LinkedIn */
      .fa-linkedin{
@@ -90,10 +101,10 @@ nav ul{ /* affecting the whole bar - list*/
     border: 10px solid rgba(84,56,116);
     border-radius: 50%;
     background: linear-gradient(145deg, #fff8db, #d9d1b9);
-box-shadow:  8px 8px 23px #bab39e,
+    box-shadow:  8px 8px 23px #bab39e,
              -8px -8px 23px #fffffc;
   }
-
+/* Trying to have picture change on mouse over event */
   .portraitMouseover{
     border: solid 10px rgb(87, 56, 116);
     border-radius:50%; 
@@ -134,20 +145,21 @@ box-shadow:  8px 8px 23px #bab39e,
     align-items: center;
     padding: 40px;
     margin: 20px;
-    background-color: rgb(249, 246, 236);
+    border: 8px solid rgba(249, 246, 236, 0.8);
+    background-color: rgb(249, 246, 236, 0.4);
     
 }
  /* TOP Intro Heading "This is me, Nancy" */
   .intro h1{ 
     font-family: monospace;
-    font-size: xx-large;
-    color: rgb(84, 73, 38);
+    font-size:3em;
+    color: rgb(87, 76, 39);
     
 }
  /* Top Intro sentence "Come on in, make yourself at home..." */
   .intro h3{
     font-family: monospace;
-    color: rgb(84, 73, 38);
+    color: rgb(64, 56, 29);
 }
 
 /* - - - - - HOME SECTION - - - - - */
@@ -168,75 +180,60 @@ box-shadow:  8px 8px 23px #bab39e,
   flex-direction:column;
   font-family: monospace;
 }
+/* - - - - - SKILLS SECTION - - - - - */
+
+/* Languages - html, css, java script, python, mysql, */
+/* Creative studios - procreate, light room */
 
 /* - - - - - PROJECTS SECTION - - - - - */
-/* body selector styles combined above */
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.panels {
-  min-height: 100vh;
-  overflow: hidden;
+/* Button styling */
+.btn-group {
   display: flex;
+  justify-content: space-evenly;
+  align-items: space-around;
+  align-self: center;
+  flex-wrap: wrap;
+  margin: 20px;
 }
-
-.panel {
-  background: #6B0F9C;
-  box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
-  color: white;
-  text-align: center;
-  align-items: center;
-  /* Safari transitionend event.propertyName === flex */
-  /* Chrome + FF transitionend event.propertyName === flex-grow */
-  transition:
-    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-    background 0.2s;
-  font-size: 20px;
-  background-size: cover;
-  background-position: center;
-  flex: 1;
-  justify-content: center;
-  display:flex;
-  flex-direction: column;
-}
-
-.panel1 { background-image:url(https://images.unsplash.com/photo-1504609813442-a8924e83f76e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); }
-.panel2 { background-image:url(https://plus.unsplash.com/premium_photo-1666323594456-cd1b09b2cbf4?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); }
-.panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
-.panel4 { background-image:url(https://plus.unsplash.com/premium_photo-1672115680958-54438df0ab82?q=80&w=1484&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); }
-.panel5 { background-image:url(https://images.unsplash.com/photo-1636469433065-aca5c8e7e81a?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) }
-
-/* Flex Children */
-.panel > * {
-  margin: 0;
-  width: 100%;
-  transition: transform 0.5s;
-  flex: 1 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.panel > *:first-child {transform: translateY(-100%);}
-.panel.open-active > *:first-child {transform :translateY(0);}
-.panel > :last-child {transform: translateY(100%);}
-.panel.open-active > *:last-child {transform :translateY(0);}
-
-.panel p {
-  text-transform: uppercase;
-  font-family: 'Amatic SC', cursive;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-  font-size: 2em;
-}
-
-.panel p:nth-child(2) {
-  font-size: 4em;
-}
-
-.panel.open {
-  flex: 5;
-  font-size: 40px;
-}
+.btn {
+    align-items: center;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Courier New', Courier, monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+  
+  .btn:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .btn:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .btn:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }

@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="portfolioscript.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nancy</title>
-
 <link rel="stylesheet" href="style.css">
-
 <script src="script.js"></script>
-
+<!-- Icons library -->
+<script src="https://kit.fontawesome.com/0ec96ed1a6.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
+<!-- Particles background -->
+<div id="particles-js"></div>
+
 <!-- NAV BAR -->
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Get in Contact</a></li>
         </ul>
     </nav>
@@ -65,11 +67,10 @@
         <!-- TOP Intro Heading-->
         <h1>This is me, Nancy</h1> 
         <!-- TOP Intro Sentence-->
-        <h3> Come on in, make yourself at home and I'll let you know a bit about me...</h3>
-       
+        <h3> Come on in, make yourself at home and I'll let you know a bit about me...</h3>      
     </section>
 
-<section class = "drawings">
+<div class = "drawings">
     <div>
        <img src="https://raw.githubusercontent.com/nmparsons24/Portfolio-Images/main/Me%20%26%20Cat.jpg"
          class = "catDrawing"
@@ -81,23 +82,55 @@
           height="320"
           width="320"> -->
     </div>
-
-</section>
-
+  </div>
 <br>
 
 <!-- Home Section -->
+<div id="particles-js"></div>
 <section id="home">
     <h2>Home</h2>
-    <p>Welcome to the home section of the page.</p>
+    <div> </div>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illo aliquam doloremque earum iste pariatur assumenda amet tempora ex accusamus omnis voluptate culpa sunt ratione facere minus magnam, inventore beatae.</p>
 
 <!-- About Section -->
 <section id="about">
     <h2>About Me</h2>
     <p>Aspiring software developer</p>
-    <p>I am at the beginning of</p>
+    <p>I am at the beginning of my coding journey, exploring the big wide world of front end development.</p>
 </section>
+
+<!-- Project Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <p>See below some examples of what I've been working on, more to come as </p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur ex tenetur dolor, cumque quaerat sapiente deleniti error reprehenderit, corrupti incidunt expedita quas, iste esse. Ipsa eum sequi non dolorem esse?</p>
+</section>
+
+<!-- Project Panel Section -->
+
+<div class="btn-group">
+  <div class="btn-canvas btn-block">
+    <a href = "indexcanvas.html" target="_blank"><button class="btn btn-canvas btn-block">Try the canvas</button></a>
+    <!-- <p>Using JavaScript, this interactive canvas allows the user to draw in real time with a continuously changing colour pallet and brush size</p> -->
+  </div>
+  <div class="btn-music btn-block">
+    <a href = "indexdrum.html" target="_blank"><button class = "btn btn-music btn-block">Make some noise</button></a>
+
+  </div>
+  <div class="btn-clock btn-block">
+    <a href = "indexclock.html" target="_blank"><button class ="btn btn-clock btn-block">Is that the time?</button></a>
+  </div>
+  <div class="btn-python btn-block">
+    <a href="https://github.com/nmparsons24/Python-Weather-App/tree/main"  
+        target="_blank"><button class ="btn btn-python btn-block">
+        <i class="fa-brands fa-python"></i> Python Weather App
+        </button></a>
+  </div>
+  <div class="btn-mysql btn-block">
+    <i class="fa-solid fa-database"></i>
+    <a href = "https://github.com/nmparsons24/MySQL---UK-Bird-Sighting-Data" target="_blank"><button class ="btn btn-mysql btn-block"> MySQL British Bird Sightings</button></a>
+  </div>
+</div>
 
 <!-- Contact Section -->
 <section id="contact">
@@ -106,35 +139,8 @@
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur ex tenetur dolor, cumque quaerat sapiente deleniti error reprehenderit, corrupti incidunt expedita quas, iste esse. Ipsa eum sequi non dolorem esse?</p>
 </section>
 
-<!-- Project Section -->
- <span>
-<div class="panels">
-    <div class="panel panel1">
-      <p>Hey</p>
-      <!-- Link to Drawing canvas -->
-      <p><a href="indexcanvas.html">Let's</a>
-      <p>Draw</p>
-    </div>
-    <div class="panel panel2">
-      <p>Give</p>
-      <p>Take</p>
-      <p>Receive</p>
-    </div>
-    <div class="panel panel3">
-      <p>Experience</p>
-      <p>It</p>
-      <p>Today</p>
-    </div>
-    <div class="panel panel4">
-      <p>Give</p>
-      <p>All</p>
-      <p>You can</p>
-    </div>
-    <div class="panel panel5">
-      <p>Life</p>
-      <p>In</p>
-      <p>Motion</p>
-    </div>
-  </div>
-</span>
+<!-- script links for particles background -->
+<script type="text/javascript" src="particles.js"></script>
+<script type="text/javascript" src="app.js"></script>
 
+</body>
