@@ -205,6 +205,7 @@ nav ul{ /* affecting the whole bar - list*/
 .text {
   color: white;
   font-size: 20px;
+  font-family: monospace;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -260,6 +261,14 @@ nav ul{ /* affecting the whole bar - list*/
   background-color: rgb(249, 246, 236, 0.4); 
 }
 
+.projectGIF {
+  border: 5px solid rgba(186, 149, 221, 0.686);;
+  border-radius:50%;  
+  margin: 5px;
+  background: linear-gradient(145deg, #fff8db, #d9d1b9);
+  box-shadow:  8px 8px 23px #bab39e,
+               -8px -8px 23px #fffffc; 
+}
 /* Button styling */
 .btn-group {
   display: flex;
@@ -299,6 +308,9 @@ nav ul{ /* affecting the whole bar - list*/
   }
 
   .btn-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0.5rem;
   }
   
@@ -336,6 +348,42 @@ nav ul{ /* affecting the whole bar - list*/
     background-color: rgb(249, 246, 236, 0.4); 
 }
 
+/* Moon Picture */
+.moonContainer {
+  flex-wrap: wrap;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+}
+
+.moon {
+  opacity: 1;
+  border: 5px solid rgba(186, 149, 221, 0.686);;
+  border-radius:50%;  
+  margin: 5px;
+  background: linear-gradient(145deg, #fff8db, #d9d1b9);
+  box-shadow:  8px 8px 23px #bab39e,
+               -8px -8px 23px #fffffc;
+}
+
+.moonContainer:hover .overlay {
+  opacity: 0.7;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  font-family: monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 /* - - - - - CONTACT SECTION - - - - - */
 .contactIntro {
   flex-wrap: wrap;
@@ -344,6 +392,7 @@ nav ul{ /* affecting the whole bar - list*/
   align-items: center;
   flex-direction:column;
   font-family: monospace;
+  margin-top: 1rem;
   border: 5px solid rgba(249, 246, 236, 0.8);
   background-color: rgb(249, 246, 236, 0.4);
 }
