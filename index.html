@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nancy</title>
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+
 <!-- Icons library -->
-<script src="https://kit.fontawesome.com/0ec96ed1a6.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></script>
 </head>
 <body>
 <!-- Particles background -->
@@ -17,9 +17,10 @@
 <!-- NAV BAR -->
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
+            <!-- <li><a href="#home">Home</a></li> -->
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#future">Future</a></li>
             <li><a href="#contact">Get in Contact</a></li>
         </ul>
     </nav>
@@ -34,20 +35,21 @@
       <li><a href="https://www.instagram.com/nancynoo/?hl=en" 
              class="fa fa-instagram" 
              target="_blank"></a></li> 
+      <li><a href="https://github.com/nmparsons24" 
+             class="fa fa-github" 
+             target="_blank"></a></li> 
       </ul> 
  </div>
  
 <!-- Intro Section  -->
-    <section class="intro">   
-
+    <section class = "intro" >   
         <!-- PORTRAIT IMAGE -->
          <div class="potrait">
            <img src="https://media.licdn.com/dms/image/v2/D4E03AQHE82JdY_RHfg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725592287330?e=1739404800&v=beta&t=G7Lc4rsk31IKgg27ossaRevb5LNsh-5S1VOXD3FUwm8"
            height="320"
            width="320"
            alt="Nancy Parsons"
-           class="portraitDefault"
-           >
+           class="portraitDefault">
            <!-- <img src="https://github.com/nmparsons24/Portfolio-Images/blob/main/Ben%20Lomond.jpg?raw=true" -->
            <!-- height="320"
            width="500"
@@ -59,88 +61,155 @@
            alt="Nancy Parsons"
            class="portraitMouseover"
            > -->
-           
          </div>
 
      <br>
-
         <!-- TOP Intro Heading-->
         <h1>This is me, Nancy</h1> 
         <!-- TOP Intro Sentence-->
         <h3> Come on in, make yourself at home and I'll let you know a bit about me...</h3>      
     </section>
 
-<div class = "drawings">
-    <div>
-       <img src="https://raw.githubusercontent.com/nmparsons24/Portfolio-Images/main/Me%20%26%20Cat.jpg"
-         class = "catDrawing"
-         height="320"
-         width="320"> 
-         <!-- Below is another graphic including me and dog instead of cat -->
-        <!-- <img src="https://raw.githubusercontent.com/nmparsons24/Portfolio-Images/main/Me%20%26%20Dog.jpg"
-          class = "dogDrawing"
-          height="320"
-          width="320"> -->
-    </div>
-  </div>
-<br>
-
 <!-- Home Section -->
+ 
+ <!-- should the particles div be here though? -->
 <div id="particles-js"></div>
-<section id="home">
-    <h2>Home</h2>
+
+<section id="home" class = "home-group">
+    <!-- <h2>Home</h2>
     <div> </div>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illo aliquam doloremque earum iste pariatur assumenda amet tempora ex accusamus omnis voluptate culpa sunt ratione facere minus magnam, inventore beatae.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illo aliquam doloremque earum iste pariatur assumenda amet tempora ex accusamus omnis voluptate culpa sunt ratione facere minus magnam, inventore beatae.</p> -->
+</section>
 
 <!-- About Section -->
 <section id="about">
+  <div class = "text-group">
+    <h2><div class = "drawings">
+      <img src="https://raw.githubusercontent.com/nmparsons24/Portfolio-Images/main/Me%20%26%20Cat.jpg"
+        class = "catDrawing"
+        height="320"
+        width="320"> 
+        <!-- Below is another graphic including me and dog instead of cat -->
+       <!-- <img src="https://raw.githubusercontent.com/nmparsons24/Portfolio-Images/main/Me%20%26%20Dog.jpg"
+         class = "dogDrawing"
+         height="320"
+         width="320"> -->
+   <div class="overlay">
+     <div class="text">An original image created with the Procreate app.
+     </div>
+   </div>
+ </div>
+ </h2>
+ <div class = "aboutMeText">
     <h2>About Me</h2>
-    <p>Aspiring software developer</p>
-    <p>I am at the beginning of my coding journey, exploring the big wide world of front end development.</p>
+    <h2>Aspiring software developer</h2>
+    <p>I have over a decade of experience in customer service, hospitality, and outdoor activities, supported by a first-class degree in Biological Sciences from the University of Bath. After university, my curiosity took me across the UK, three years in New Zealand, and several months in Canada, where I developed resilience, adaptability, and teamwork skills. In recent years, my curious creativity has had me casually learning HTML and CSS, and discovering the satisfaction of building web pages. Creativity has been a constant in my life, whether through music, art, or crafting innovative solutions. </p>
+    <br>
+    <p>I am now studying software development full-time through an intensive bootcamp with JustIT and gaining technical expertise in programming languages (HTML5, CSS, Javascript, MySQL, and Python). This has allowed me to combine and unleash my analytical thinking and creative energy on real-world coding projects. I’m focused on building my understanding of how to create functional software solutions while strengthening my problem-solving and design skills.
+    </p>
+  </div>  
+</div>
+<br>
 </section>
 
 <!-- Project Section -->
 <section id="projects">
+<div class = "projectsText">
   <h2>Projects</h2>
-  <p>See below some examples of what I've been working on, more to come as </p>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur ex tenetur dolor, cumque quaerat sapiente deleniti error reprehenderit, corrupti incidunt expedita quas, iste esse. Ipsa eum sequi non dolorem esse?</p>
-</section>
+  <p>See below some examples of what I've been working on... </p>
+</div>
 
-<!-- Project Panel Section -->
-
+<!-- Project Button Section -->
 <div class="btn-group">
+
+  <!-- Digital Analog Clock "Is that the time" project -->
+  <div class="btn-clock btn-block">
+    <a href = "indexclock.html" target="_blank"><button class ="btn btn-clock btn-block"><img class = "project-logo" src = "https://github.com/nmparsons24/Portfolio-Images/blob/main/javascript-logo.png?raw=true">Is that the time?</button></a>
+  </div>
+
+  <!-- Python weather app GITHUB project -->
+  <div class="btn-python btn-block">
+  <a href="https://github.com/nmparsons24/Python-Weather-App/tree/main"  
+      target="_blank"><button class ="btn btn-python btn-block">
+      <img class = "project-logo" src = "https://github.com/nmparsons24/Portfolio-Images/blob/main/python-logo.png?raw=true">Python Weather App
+      </button></a>
+    </div>
+
+  <!-- Canvas "try the canava" project -->
   <div class="btn-canvas btn-block">
-    <a href = "indexcanvas.html" target="_blank"><button class="btn btn-canvas btn-block">Try the canvas</button></a>
+    <a href = "indexcanvas.html" target="_blank"><button class="btn btn-canvas btn-block"><img class = "project-logo" src = "https://github.com/nmparsons24/Portfolio-Images/blob/main/javascript-logo.png?raw=true">Try the canvas</button></a>
     <!-- <p>Using JavaScript, this interactive canvas allows the user to draw in real time with a continuously changing colour pallet and brush size</p> -->
   </div>
-  <div class="btn-music btn-block">
-    <a href = "indexdrum.html" target="_blank"><button class = "btn btn-music btn-block">Make some noise</button></a>
 
-  </div>
-  <div class="btn-clock btn-block">
-    <a href = "indexclock.html" target="_blank"><button class ="btn btn-clock btn-block">Is that the time?</button></a>
-  </div>
-  <div class="btn-python btn-block">
-    <a href="https://github.com/nmparsons24/Python-Weather-App/tree/main"  
-        target="_blank"><button class ="btn btn-python btn-block">
-        <i class="fa-brands fa-python"></i> Python Weather App
-        </button></a>
-  </div>
+  <!-- MySQL Bird Sightings GITHUB link -->
   <div class="btn-mysql btn-block">
-    <i class="fa-solid fa-database"></i>
-    <a href = "https://github.com/nmparsons24/MySQL---UK-Bird-Sighting-Data" target="_blank"><button class ="btn btn-mysql btn-block"> MySQL British Bird Sightings</button></a>
+      <a href = "https://github.com/nmparsons24/MySQL---UK-Bird-Sighting-Data" target="_blank"><button class ="btn btn-mysql btn-block"><img class = "project-logo" src = "https://github.com/nmparsons24/Portfolio-Images/blob/main/mysql-logo.png?raw=true">MySQL British Birds</button></a>
+  </div>
+
+  <!-- Drum kit "join the band" project -->
+  <div class="btn-music btn-block">
+    <a href = "indexdrum.html" target="_blank"><button class = "btn btn-music btn-block"><img class = "project-logo" src = "https://github.com/nmparsons24/Portfolio-Images/blob/main/javascript-logo.png?raw=true">Make some noise</button></a>
   </div>
 </div>
+</section>
+
+<!-- Furute Projects/learning -->
+<section id="future">
+  <h2>So what's next?</h2>
+  <p>With lots to learn and a foundation to build on I am focusing on learning industry standards and common practises. Achieving these goals by building new projects that combine  and expand my existing knowledge to create engagin and accessible webpages. </p>
+  <p></p>
+</section>
 
 <!-- Contact Section -->
 <section id="contact">
+  <div class =contactIntro>
     <h2>Get in Contact</h2>
-    <p>Get in touch through the Contact section.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur ex tenetur dolor, cumque quaerat sapiente deleniti error reprehenderit, corrupti incidunt expedita quas, iste esse. Ipsa eum sequi non dolorem esse?</p>
+    <h3>Enter message below (optional) and click button "Send"</h3>
+  </div>
+    <div class="container">
+      <form action="/action_page.php">
+        <div class="row">
+          <div class="col-25">
+            <label for="name">Your Name...</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="name" name="name" placeholder="Type your name here...">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="email">Your Email...</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Pop your email here...">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject...</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Leave me a message..." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
 </section>
+<footer>
+  <p>Click my email below to contact me directly</p>
+  <p><a href="mailto:nmparsons24@gmail.com">nmparsons24@gmail.com</a></p>
+</footer>
+
+<!-- General page script -->
+<script src="script.js"></script>
 
 <!-- script links for particles background -->
 <script type="text/javascript" src="particles.js"></script>
+
 <script type="text/javascript" src="app.js"></script>
 
 </body>
+</html>

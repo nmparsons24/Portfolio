@@ -3,15 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doodle Away</title>
+    <title>Draw Away</title>
     <link rel="icon" href="https://fav.farm/🎨" />
 </head>
 <body>
-    <h1> Click, drag, draw, enjoy</h1>
+    <h1 class="title"> Click, drag, draw, enjoy</h1>
+    <h3 class="erase"> Double click to erase</h3>
     
+    <canvas id="draw" width=auto height=auto></canvas>
+<style>
+    .title{
+    text-align: center;
+    font-size: 3rem;
+    font-family:'Courier New', Courier, monospace;
+    color: rgb(65, 56, 25);
+    margin-top: 0;
+    border-bottom: 5px solid rgb(112, 96, 43);
+    background-color:rgb(240, 235, 219);
+    }
 
- <canvas id="draw" width=auto height=auto></canvas>
-    
+    .erase{
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(112, 96, 43);
+    font-family:'Courier New', Courier, monospace;
+    margin-top: 0;
+    }
+
+  </style>
     <script>
       const canvas = document.querySelector('#draw');
       const ctx = canvas.getContext('2d');
@@ -23,7 +42,7 @@
           ctx.lineJoin = 'round';
           ctx.lineCap = 'round';
           ctx.lineWidth = 50;
-    // go on MDN for different lineJoin and lineCap options
+
         
         let isDrawing = false;
     // dummy variable so that it can flag on and off drawing based on whether click is held down
@@ -32,7 +51,7 @@
         let hue = 0;
         let direction = true;
         
-    // you need starting and ending x and y 
+    // needs starting and ending x and y 
         
         function draw(e) {
           if (!isDrawing) return;
@@ -50,7 +69,7 @@
           if (hue >= 360) {
             hue = 0;
           }
-          if (ctx.lineWidth >= 100 || ctx.lineWidth <= 5) {
+          if (ctx.lineWidth >= 70 || ctx.lineWidth <= 5) {
             direction = !direction;
           }
           if(direction) {
@@ -71,14 +90,6 @@
         canvas.addEventListener('dblclick', (e) => ctx.clearRect(0, 0, canvas.width, canvas.height));
         
         </script>
-        
-        <style>
-          html, body {
-            margin: 0;
-          }
-        </style>
-        
-
           
 </body>
 </html>

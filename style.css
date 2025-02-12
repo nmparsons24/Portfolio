@@ -2,8 +2,9 @@ body{
   background-color: rgb(240, 232, 205);
   margin: 0;
   color: rgb(64, 56, 29);
+  font-family: 'Courier New', Courier, monospace;
 }
-/* - - - - - PARTICLES - - - - - */
+/* - - - - - PARTICLES BACKGROUND - - - - - */
 #particles-js {
   position:fixed;
   width: 100%;
@@ -14,6 +15,7 @@ body{
   background-size: cover;
   /* background-position: 50% 50%; */
 }
+
 /* - - - - - INTRO - - - - - */
 
 /* NAV BAR */
@@ -39,7 +41,6 @@ nav ul{ /* affecting the whole bar - list*/
     text-decoration: none;
     font-family:monospace;
     font-size: large;
-    background-color: rgb(87, 56, 116,);
   }
   /* Nav Hover */
    nav ul li a:hover {
@@ -55,7 +56,7 @@ nav ul{ /* affecting the whole bar - list*/
     right: 0;
     margin-right: 20px;
     border: px solid rgba(217, 196, 236, 0.686);
-    border-end-start-radius: 20%;
+    border-end-start-radius: 40%;
     background-color: rgba(217, 196, 236, 0.686);
    }
  
@@ -63,24 +64,18 @@ nav ul{ /* affecting the whole bar - list*/
       display:flex;
       flex-flow: wrap column;
       list-style:none;
-      padding: 15px;
+      padding: 20px;
       margin:auto;
       font-size: 50px;
+      border-end-start-radius: 40%;
      } 
 
    /* LinkedIn */
-     .fa-linkedin{
+     .fa {
      padding:10px;
      text-decoration: none;
      color: white;
      margin:5px;
-     }
-
-   /* Instagram */
-     .fa-instagram{
-     padding:10px;
-     text-decoration: none;
-     color: white;
      }
 
    /* Hover Effect for Icons */
@@ -92,49 +87,25 @@ nav ul{ /* affecting the whole bar - list*/
 
   /* PORTRAIT PICTURE */
   .portraitDefault {
-    /* flex-wrap: wrap; */
-    /* display:flex; */
-    /* justify-content: center;
-    align-items: center; */
-    /* margin:auto; */
+    flex-wrap: wrap;
+    display:flex;
     opacity: 1;
     border: 10px solid rgba(84,56,116);
     border-radius: 50%;
     background: linear-gradient(145deg, #fff8db, #d9d1b9);
     box-shadow:  8px 8px 23px #bab39e,
              -8px -8px 23px #fffffc;
+    /* fade in animation */
+    animation-name: animate-fade-in;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
   }
 /* Trying to have picture change on mouse over event */
-  .portraitMouseover{
+  /* .portraitMouseover{
     border: solid 10px rgb(87, 56, 116);
     border-radius:50%; 
-  }
-
-  .drawings {
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction:row;
-    justify-content:space-around;
-    align-items: center;
-  }
-  .catDrawing {
-    border: 5px solid rgba(186, 149, 221, 0.686);;
-    border-radius:50%;  
-    margin: 5px;
-    background: linear-gradient(145deg, #fff8db, #d9d1b9);
-    box-shadow:  8px 8px 23px #bab39e,
-                 -8px -8px 23px #fffffc;
-  }
-/* Not currently displaying below image */
-  /* .dogDrawing {
-    border: 5px solid rgba(186, 149, 221, 0.686);
-    border-radius:50%;
-    margin: 5px; 
-    background: linear-gradient(145deg, #fff8db, #d9d1b9);
-    box-shadow:  8px 8px 23px #bab39e,
-             -8px -8px 23px #fffffc;
   } */
-
 
  /* TOP Intro ALL */ 
   .intro {
@@ -146,8 +117,7 @@ nav ul{ /* affecting the whole bar - list*/
     padding: 40px;
     margin: 20px;
     border: 8px solid rgba(249, 246, 236, 0.8);
-    background-color: rgb(249, 246, 236, 0.4);
-    
+    background-color: rgb(249, 246, 236, 0.4);    
 }
  /* TOP Intro Heading "This is me, Nancy" */
   .intro h1{ 
@@ -160,6 +130,18 @@ nav ul{ /* affecting the whole bar - list*/
   .intro h3{
     font-family: monospace;
     color: rgb(64, 56, 29);
+}
+/* Fade in amnimation */
+.intro h1, .intro h3 {
+  animation-name: animate-fade-in;
+  animation-duration: 2.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* - - - - - HOME SECTION - - - - - */
@@ -180,12 +162,103 @@ nav ul{ /* affecting the whole bar - list*/
   flex-direction:column;
   font-family: monospace;
 }
+
+/* - - - - - ABOUT ME SECTION - - - - - */
+.drawings {
+  float:right;
+  position:absolute;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items: center;
+  position: relative;
+  padding:200px;
+}
+/* Below is the image immediately below the initial welcome sec */
+.catDrawing {
+  position: absolute;
+  display: flex;
+  border: 5px solid rgba(186, 149, 221, 0.686);;
+  border-radius:50%;  
+  margin: 5px;
+  background: linear-gradient(145deg, #fff8db, #d9d1b9);
+  box-shadow:  8px 8px 23px #bab39e,
+               -8px -8px 23px #fffffc;
+}
+/* Text on hover */
+.overlay {
+  position: absolute;
+  display:flex;
+  height: 320px;
+  width: 320px;
+  opacity: 0;
+  transition: .5s ease-in-out;
+  border-radius: 50%;
+  background-color: rgb(87, 56, 116, 0.8);
+}
+
+.drawings:hover .overlay {
+  opacity: 0.7;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Not currently displaying below image */
+/* .dogDrawing {
+  border: 5px solid rgba(186, 149, 221, 0.686);
+  border-radius:50%;
+  margin: 5px; 
+  background: linear-gradient(145deg, #fff8db, #d9d1b9);
+  box-shadow:  8px 8px 23px #bab39e,
+           -8px -8px 23px #fffffc;
+} */
+
+/* - - - - - ABOUT ME - - - - - */
+.aboutMeText {
+  flex-wrap: wrap;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction:column;
+  font-family: monospace;
+  margin: 1rem;
+  padding: 1rem;
+  border: 8px solid rgba(249, 246, 236, 0.8);
+  background-color: rgb(249, 246, 236, 0.4); 
+}
+
 /* - - - - - SKILLS SECTION - - - - - */
 
 /* Languages - html, css, java script, python, mysql, */
 /* Creative studios - procreate, light room */
+/* Create with icon grid above projects section */
 
 /* - - - - - PROJECTS SECTION - - - - - */
+
+.projectsText {
+  flex-wrap: wrap;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction:column;
+  font-family: monospace;
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 8px solid rgba(249, 246, 236, 0.8);
+  background-color: rgb(249, 246, 236, 0.4); 
+}
 
 /* Button styling */
 .btn-group {
@@ -204,24 +277,29 @@ nav ul{ /* affecting the whole bar - list*/
     box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
     box-sizing: border-box;
     color: #36395A;
-    cursor: pointer;
-    display: inline-flex;
+    display: flex;
+    padding: 20px;
     font-family: 'Courier New', Courier, monospace;
     height: 48px;
     justify-content: center;
     line-height: 1;
     overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 10px;
     position: relative;
-    text-align: left;
+    text-align: center;
+    cursor: pointer;
     transition: box-shadow .15s,transform .15s;
-    user-select: none;
-    -webkit-user-select: none;
     touch-action: manipulation;
-    white-space: nowrap;
     will-change: box-shadow,transform;
     font-size: 18px;
+  }
+
+  .btn-group a {
+    text-decoration: none;
+  }
+
+  .btn-block {
+    margin: 0.5rem;
   }
   
   .btn:focus {
@@ -235,5 +313,123 @@ nav ul{ /* affecting the whole bar - list*/
   
   .btn:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
-    transform: translateY(2px);
+    transform: translateX(2px);
   }
+
+  /* project logo styling */
+  .project-logo {
+    height: 18px;
+    justify-content: center;
+    padding-right: 10px;
+  }
+/* - - - - - FUTURE WHATS NEXT SECTION - - - - -  */
+#future {
+    flex-wrap: wrap;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+    font-family: monospace;
+    margin: 1rem;
+    padding: 1rem;
+    border: 8px solid rgba(249, 246, 236, 0.8);
+    background-color: rgb(249, 246, 236, 0.4); 
+}
+
+/* - - - - - CONTACT SECTION - - - - - */
+.contactIntro {
+  flex-wrap: wrap;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction:column;
+  font-family: monospace;
+  border: 5px solid rgba(249, 246, 236, 0.8);
+  background-color: rgb(249, 246, 236, 0.4);
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-size: 1.5rem;
+  border-bottom: 5px solid rgba(249, 246, 236, 0.8);;
+}
+
+input[type=submit] {
+  background-color: rgba(84,56,116);
+  color: rgba(255, 255, 255);
+  padding: 12px 20px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(84,56,116, 0.8);
+  transform: scale(1.1);
+}
+
+.container {
+  border-radius: 5px;
+  background-color: rgb(217, 196, 236, 0.74);
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* - - - - - FOOTER - - - - */
+footer {
+  flex-wrap: wrap;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction:column;
+  font-family: monospace;
+  color: rgba(84,56,116);
+  border: 5px solid rgba(249, 246, 236, 0.8);
+  background-color: rgb(217, 196, 236, 0.5);
+}
+footer a {
+  color: rgba(84,56,116);
+  text-decoration: none;
+}
+footer a:hover {
+  font-size: 110%;
+  font-weight: bolder;
+}
+
